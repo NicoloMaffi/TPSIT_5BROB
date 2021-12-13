@@ -1,15 +1,15 @@
        IDENTIFICATION DIVISION.
-           PROGRAM-ID. MATH.
+           PROGRAM-ID. MATH-COMPUTE.
            AUTHOR. NICOLO` MAFFI.
-           INSTALLATION. 12/12/2021.
-           DATE-WRITTEN. 12/12/2021.
-           DATE-COMPILED. 12/12/2021.
+           INSTALLATION. 13/12/2021.
+           DATE-WRITTEN. 13/12/2021.
+           DATE-COMPILED. 13/12/2021.
            SECURITY. NON-CONFIDENTIAL.
        DATA DIVISION.
            WORKING-STORAGE SECTION.
                77 NUM1 PIC S9(4)V9(3).
                77 NUM2 PIC S9(4)V9(3).
-               77 RES  PIC S9(8)V9(3). 
+               77 RIS  PIC S9(8)V9(3). 
        PROCEDURE DIVISION.
            DISPLAY "FIRST NUMBER: " WITH NO ADVANCING
            ACCEPT NUM1
@@ -17,19 +17,19 @@
            DISPLAY "SECOND NUMBER: " WITH NO ADVANCING
            ACCEPT NUM2
 
-           ADD NUM2 TO NUM1 GIVING RES
-           DISPLAY NUM1 " + " NUM2 " = " RES
+           COMPUTE RIS = NUM1 + NUM2
+           DISPLAY NUM1 " + " NUM2 " = " RIS
 
-           SUBTRACT NUM2 FROM NUM1 GIVING RES
-           DISPLAY NUM1 " - " NUM2 " = " RES
+           COMPUTE RIS = NUM1 - NUM2
+           DISPLAY NUM1 " - " NUM2 " = " RIS
 
-           MULTIPLY NUM1 BY NUM2 GIVING RES
-           DISPLAY NUM1 " * " NUM2 " = " RES
+           COMPUTE RIS = NUM1 * NUM2
+           DISPLAY NUM1 " * " NUM2 " = " RIS
 
            IF NUM2 IS EQUALS TO ZERO THEN
                DISPLAY "ERROR: DIVISION BY ZERO!"
            ELSE
-               DIVIDE NUM2 INTO NUM1 GIVING RES
-               DISPLAY NUM1 " / " NUM2 " = " RES
+               COMPUTE RIS = NUM1 / NUM2
+               DISPLAY NUM1 " / " NUM2 " = " RIS
            END-IF
        STOP RUN.

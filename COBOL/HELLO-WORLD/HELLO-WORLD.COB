@@ -4,7 +4,7 @@
            INSTALLATION. 12/12/2021.
            DATE-WRITTEN. 12/12/2021.
            DATE-COMPILED. 12/12/2021.
-           SECURITY. DON`T KNOW.
+           SECURITY. NON-CONFIDENTIAL.
        PROCEDURE DIVISION.
            DISPLAY "HELLO WORLD!"
        STOP RUN.
