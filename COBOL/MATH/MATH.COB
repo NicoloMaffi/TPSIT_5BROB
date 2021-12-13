@@ -31,4 +31,5 @@
            ELSE
                DIVIDE NUM2 INTO NUM1 GIVING RIS
                DISPLAY NUM1 " / " NUM2 " = " RIS
+           END-IF
        STOP RUN.
