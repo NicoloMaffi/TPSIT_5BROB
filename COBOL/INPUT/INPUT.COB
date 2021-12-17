@@ -5,19 +5,18 @@
        DATE-WRITTEN. 12/12/2021.
        DATE-COMPILED. 12/12/2021.
        SECURITY. CONFIDENTIAL.
-       ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
-           77 NUM1               PIC S9(2).
-           77 NUM2               PIC S9(3)V9(3).
+           77 NUM1               PIC S9(2) VALUE ZEROS.
+           77 NUM2               PIC S9(3)V9(3) VALUE IS 0.
            01 FISCAL-CODE.
                02 P-NAME.
                    03 LAST-NAME  PIC A(3).
                    03 FIRST-NAME PIC A(3).
                02 BIRTH-DATE.
-                   03 YEAR       PIC 9(2).
+                   03 YEAR       PIC 99.
                    03 MONTH      PIC A.
-                   03 B-DAY      PIC 9(2).
+                   03 B-DAY      PIC 99.
                02 DISTRICT       PIC X(4).
                02 CONTROL-CODE   PIC 9.
        PROCEDURE DIVISION.

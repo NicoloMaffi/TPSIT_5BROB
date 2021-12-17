@@ -5,12 +5,14 @@
        DATE-WRITTEN. 12/12/2021.
        DATE-COMPILED. 12/12/2021.
        SECURITY. CONFIDENTIAL.
-       ENVIRONMENT DIVISION.
        DATA DIVISION.
        WORKING-STORAGE SECTION.
            77 NUM1 PIC S9(4)V9(3).
            77 NUM2 PIC S9(4)V9(3).
-           77 RES  PIC S9(8)V9(3). 
+           77 NUM3 PIC 9999 VALUE IS 34.
+           77 RES  PIC S9(8)V9(3).
+           77 IRES PIC S9(4).
+           77 RM   PIC S9(4).
        PROCEDURE DIVISION.
            DISPLAY "FIRST NUMBER: " WITH NO ADVANCING
            ACCEPT NUM1
@@ -20,6 +22,12 @@
 
            ADD NUM2 TO NUM1 GIVING RES
            DISPLAY NUM1 " + " NUM2 " = " RES
+
+           ADD NUM3, NUM2 TO NUM1 GIVING RES
+           DISPLAY RES
+
+           ADD NUM3, NUM2, NUM1 GIVING RES
+           DISPLAY RES
 
            SUBTRACT NUM2 FROM NUM1 GIVING RES
            DISPLAY NUM1 " - " NUM2 " = " RES
@@ -33,4 +41,7 @@
                DIVIDE NUM2 INTO NUM1 GIVING RES
                DISPLAY NUM1 " / " NUM2 " = " RES
            END-IF
+
+           DIVIDE NUM2 INTO NUM1 GIVING IRES REMAINDER RM
+           DISPLAY NUM1 " / " NUM2 " = " IRES " | " RM
        STOP RUN.
