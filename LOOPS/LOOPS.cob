@@ -1,0 +1,25 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. LOOPS.
+       AUTHOR. NICOLO' MAFFI.
+       INSTALLATION. RASPBERRY PI.
+       DATE-WRITTEN. 18/12/2021.
+       DATE-COMPILED. 18/12/2021.
+       SECURITY. CONFIDENTIAL.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+           77 IDX PIC 9 VALUE IS ZERO.
+       PROCEDURE DIVISION.
+           PERFORM OUTPUT-DATA WITH TEST AFTER UNTIL IDX > 5
+               GO TO FOR-LOOP.
+
+           OUTPUT-DATA.
+               DISPLAY IDX
+               ADD 1 TO IDX.
+
+           FOR-LOOP.
+               PERFORM OUTPUT-DATA-2 VARYING IDX FROM 1 BY 1
+                   UNTIL IDX = 5
+               STOP RUN.
+
+           OUTPUT-DATA-2.
+               DISPLAY IDX.
