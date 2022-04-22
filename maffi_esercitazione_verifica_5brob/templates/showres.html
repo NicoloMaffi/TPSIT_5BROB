@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Esercitazione Verifica di TPSIT</title>
+
+        <style>
+            table, tr, th, td {
+                border-collapse: collapse;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h3>Stato connessioni porte</h3>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>INDIRIZZO IP</th>
+                <th>PORTA</th>
+                <th>STATUS</th>
+            </tr>
+
+            {% for rec in data_scan %}
+            <tr>
+                {% for field in rec %}
+                <td>{{field}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+
+        <h3>Protocolli porte</h3>
+        <table>
+            <tr>
+                <th>PORTA</th>
+                <th>PROTOCOLLO</th>
+            </tr>
+
+            {% for rec in data_prot %}
+            <tr>
+                {% for field in rec %}
+                <td>{{field}}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>

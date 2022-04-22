@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Esercitazione Verifica di TPSIT</title>
+    </head>
+
+    <body>
+        <form action="/" method="POST">
+            <input name="ipaddr" type="text" placeholder="Indirizzo IP"> <br><br>
+            
+            Scansione da
+            <input name="minport" type="number" placeholder="Porta minima">
+            a
+            <input name="maxport" type="number" placeholder="Porta massima"> <br><br>
+
+            <button value="scan" name="scan">Scansione</button>
+            <button value="showres" name="showres">Mostra risultati</button>
+        </form>
+
+        <br><br>
+
+        <b>{{result}}</b>
+    </body>
+</html>

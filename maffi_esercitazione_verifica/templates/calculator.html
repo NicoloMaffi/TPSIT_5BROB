@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        <h1>Calculator</h1>
+
+        <form action="/calculator" method="POST">
+            <input style="width: 2%;" type="text" name="upper_extreme"> <br>
+            <h1 style="display: inline;">&#x222b;</h1> <input type="text" name="function">
+            d <input style="width: 2%;" type="text" name="integration_variable"> <br>
+            <input style="width: 2%;" type="text" name="lower_extreme"> <br><br>
+
+            <button value="indefinite_integral" name="indefinite_integral">Indefinite integral</button>
+            <button value="definite_integral" name="definite_integral">Definite integral</button>
+        </form>
+
+        <br><br>
+        {%if result %}
+        <b><p>{{result}}</p></b>
+        {% endif %}
+    </body>
+</html>
